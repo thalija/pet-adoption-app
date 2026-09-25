@@ -1,0 +1,51 @@
+/* --------------------------
+   Button main style
+   ------------------------- */
+.btn {
+    appearance: none;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.17s ease, transform 0.04s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .btn:active {
+    transform: translateY(2px);
+  }
+  
+  /* Primary Button Style */
+  .btn-primary {
+    background: #6b87c3;
+    color: rgb(255, 255, 255);
+  }
+  .btn-primary:hover {
+    background: #051c81;
+  }
+  
+  /* Secondary Button Style */
+  .btn-secondary {
+    background: #e5e7eb;
+    color: #111827;
+
+  }
+  .btn-secondary:hover {
+    background: #d1d5db;
+  }
+
+  .btn-third:hover {
+    background: #d1d5db;
+  }
+  
+  
+  /* Gray Button Style */
+  .btn-sm {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  

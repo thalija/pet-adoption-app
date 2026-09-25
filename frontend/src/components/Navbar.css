@@ -1,0 +1,63 @@
+/* --------------------------
+   Navbar Main Strip Style
+   ------------------------- */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    background-color: #535252;
+}
+
+/* --------------------------
+   Navbar Link Styles
+   ------------------------- */
+.navbar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #111;
+}
+
+
+/* --------------------------
+   Logout Button
+   ------------------------- */
+.navbar button {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    text-align: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit; 
+  }
+
+.navbar a:hover,
+.navbar button:hover {
+background-color: #111;
+}
+  
+.logout {
+    margin-left: auto; /* Puts Link to the Far Right */
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+  }

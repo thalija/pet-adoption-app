@@ -1,0 +1,355 @@
+/*Set default browser spacing */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Add style to the Landing Page */
+.landing-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fafb;
+}
+
+.landing-container {
+  text-align: center;
+}
+
+.app-logo {
+  width: 180px;
+  margin-bottom: 24px;
+}
+
+.welcome-text {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.login-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  margin-right: 100px;
+}
+
+.login-button:hover {
+  background-color: #ff5252
+}
+
+.register-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  margin-left: 100px;
+}
+
+.register-button:hover {
+  background-color: #ff5252
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Add style to the Registration Page */
+.register-page {
+  max-width: 420px;
+  margin: 50px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.register-page input:not([type="radio"]),
+.register-page select {
+  width: 90%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.register-page input:focus,
+.register-page select:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.register-page input::placeholder {
+  color: #999;
+}
+
+.register-page select {
+  background-color: #fff;
+  cursor: pointer;
+}
+.register-page button {
+  display: block;
+  margin: 20px auto;
+}
+/* --------------------------------------------
+   Has Children Radio Field Styles
+   -------------------------------------------- */
+
+   .has-children-field {
+    margin-bottom: 14px;
+  }
+  
+  .has-children-field label.title {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  
+  .has-children-options {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .has-children-options label.option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .has-children-options input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+/* Add style to Search Form */
+
+.search-form {
+  --sf-font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --sf-bg: #ffffff;
+  --sf-panel: #f8fafc;
+  --sf-text: #0f172a;
+  --sf-muted: #475569;
+  --sf-border: #d0d7de;
+  --sf-border-strong: #94a3b8;
+  --sf-primary: #2563eb;
+  --sf-primary-soft: rgba(37, 99, 235, 0.15);
+  --sf-danger: #dc2626;
+
+  --sf-radius: 10px;
+  --sf-radius-sm: 8px;
+  --sf-gap: 8px;
+  --sf-control-h: 34px;
+  --sf-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 8px 24px rgba(15, 23, 42, 0.06);
+
+  font-family: var(--sf-font);
+  color: var(--sf-text);
+  background: var(--sf-bg);
+  
+
+max-width: 100%;
+margin: 16px 16px;
+padding: 12px;
+border: 1px solid var(--sf-border);
+border-radius: var(--sf-radius);
+box-shadow: var(--sf-shadow);
+font-size: 0.9rem;
+display: flex;
+flex-wrap: wrap;
+gap: var(--sf-gap);
+align-items: flex-end;
+}
+
+.search-form > h2 {
+  flex: 0 0 100%;
+}
+
+.search-form .form-group {
+  margin: 0;
+  flex: 1 1 180px; 
+  min-width: 180px;
+}
+
+.search-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--sf-text);
+}
+
+.search-form select,
+.search-form input[type="date"],
+.search-form input[type="search"],
+.search-form input[type="text"] {
+ 
+padding: 6px 10px;
+font-size: 0.9rem;
+
+}
+
+.search-form select:hover,
+.search-form input[type="date"]:hover,
+.search-form input[type="search"]:hover,
+.search-form input[type="text"]:hover {
+  border-color: var(--sf-border-strong);
+}
+
+.search-form select:focus,
+.search-form input[type="date"]:focus,
+.search-form input[type="search"]:focus,
+.search-form input[type="text"]:focus {
+  border-color: var(--sf-primary);
+  box-shadow: 0 0 0 4px var(--sf-primary-soft);
+}
+
+.search-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 44px;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--sf-muted) 50%),
+    linear-gradient(135deg, var(--sf-muted) 50%, transparent 50%),
+    linear-gradient(to right, transparent, transparent);
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 12px) 50%,
+    0 0;
+  background-size:
+    6px 6px,
+    6px 6px,
+    100% 100%;
+  background-repeat: no-repeat;
+}
+
+.search-form .form-group:has(fieldset) {
+  border: 1px solid var(--sf-border);
+  border-radius: var(--sf-radius);
+  padding: 10px;
+  background: var(--sf-panel);
+  margin: 0;
+  flex: 1 1 100%; 
+}
+
+.search-form legend {
+  padding: 0 8px;
+  font-weight: 800;
+  color: var(--sf-text);
+  font-size: 0.9rem;
+}
+
+.search-form fieldset > label {
+  flex-direction: row;     
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-weight: 650;
+  color: var(--sf-text);
+}
+
+.search-form input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--sf-primary);
+  cursor: pointer;
+}
+
+.search-form button[type="submit"] {
+  
+  height: 36px;
+  font-size: 0.95rem;
+  align-self: flex-end;
+
+}
+
+.search-form button[type="submit"]:hover {
+  filter: brightness(0.96);
+}
+
+.search-form button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+.search-form .form-group:last-child {
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-form .form-group {
+    flex: 1 1 100%;
+  }
+}
+
+/* Add style to the Images of Pet Profile page */
+.pet-profile-image {
+  width: 300px;        /* control width */
+  height: 300px;       /* optional fixed height */
+  object-fit: cover;   /* prevents stretching */
+  border-radius: 12px; /* rounded corners */
+  display: block;
+  margin: 20px auto;   /* center image */
+}

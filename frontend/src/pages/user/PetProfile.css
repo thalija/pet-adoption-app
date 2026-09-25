@@ -1,0 +1,83 @@
+/* --------------------------
+Styling for the Pet profile form
+------------------------- */
+
+/* Centers the page */
+.pet-profile-container {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+  }
+  
+  /* Holds the content */
+  .pet-profile-card {
+    max-width: 900px;
+    width: 100%;
+    padding: 24px;
+  }
+  
+  /* Pet name at the top of the page */
+  .pet-profile-title {
+    text-align: left;
+    font-size: 36px;
+    margin: 0 0 16px 0;
+  }
+  
+  /* Image and info are side by side */
+  .pet-profile-main {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
+  
+  /* Pet image orientation */
+  .pet-profile-image {
+    width: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  /* PET DETAILS: TYPE, BREED, ENERGY LEVEL */
+  .pet-profile-details {
+    padding: 12px 14px;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    background: #fafafa;
+    min-width: 220px;
+  }
+  
+  .pet-profile-details p {
+    padding: 12px 14px;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    background: rgb(255, 255, 255);
+    min-width: 220px;
+  }
+  
+  /* Interested button area */
+  .pet-profile-actions {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Styling for DESCRIPTION, TRAITS, NEWS ITEM */
+  .pet-profile-section {
+    margin-top: 18px;
+    padding: 16px;
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    background: #fff;
+  }
+  
+  .pet-profile-section h3 {
+    margin: 0 0 10px 0;
+  }
+  
+  /* Wraps description text and makes sure line breaks when needed */
+  .pet-profile-description {
+    white-space: pre-wrap;
+    line-height: 1.5;
+  }

@@ -1,0 +1,133 @@
+/* --------------------------
+Styling for the create pet profile form
+------------------------- */
+
+/* Page layout */
+.create-pet-page {
+  max-width: 1100px;
+  margin: 10 auto;   /* 0 for center */
+  padding: 24px;
+  }
+  
+  /* Intro text spacing */
+  .create-pet-page p {
+    margin-bottom: 16px;
+  }
+  
+  /* Label on Top */
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 16px;
+  }
+  
+  /* Labels */
+  .form-label {
+    margin-bottom: 4px;
+    font-weight: 700;   /* Makes labels bold */
+  }
+  
+  /* Inputs / selects / textareas */
+  .form-control {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px 20px; /* 1st - height, 2nd - width */
+    min-height: 18px;
+    border: 1px solid #d1d5db; /* lighter gray */
+    border-radius: 4px;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #9ca3af;
+  }
+  
+  /* Text Boxes */
+  .form-textarea {
+    min-height: 100px;
+    padding: 12px;
+    line-height: 1.4;
+    resize: vertical;
+    overflow-y: auto;
+  }
+  
+  /* Below the table */
+  .form-section {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 1px;
+  }
+  
+  /* Traits */
+  .traits-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;          /* space from header */
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .traits-options {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* space between checkboxes */
+  }
+  
+  .traits-options label {
+    white-space: nowrap;
+  }
+  
+  /* Buttons panel */
+  .button-panel {
+    background: white;
+    padding: 1px;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 350px;
+    display: flex;
+    gap: 12px;
+  }
+
+  .pet-form-wrapper {
+    position: relative;
+  }
+  
+  /* Floating photo box */
+  .pet-photo-float {
+    position: absolute;
+    top: -100px; 
+    right: 0;
+    width: 220px;
+    height: 220px;
+    border-radius: 16px;
+    border: 1px solid #ddd;
+    background: #f7f7f7;
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  /* Image fills the box */
+  .pet-photo-float img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .pet-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .helper-text {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+    }
