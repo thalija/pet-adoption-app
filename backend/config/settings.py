@@ -35,7 +35,8 @@ def env_list(name: str, default: list[str]) -> list[str]:
     val = os.getenv(name)
     if not val:
         return default
-    return [x.strip() for x in val.split(",") if x.strip()]
+    # Ignore spaces and trailing slashes, e.g. "https://site.com/ , https://other.com"
+    return [x.strip().rstrip("/") for x in val.split(",") if x.strip()]
 
 
 # Quick-start development settings - unsuitable for production
@@ -172,6 +173,9 @@ CORS_ALLOWED_ORIGINS = env_list(
         "http://localhost:3000",
     ],
 )
+
+# Optional regex patterns, e.g. to accept the Render URL whatever suffix Render adds
+CORS_ALLOWED_ORIGIN_REGEXES = env_list("DJANGO_CORS_ALLOWED_ORIGIN_REGEXES", [])
 
 
 # =================================================
