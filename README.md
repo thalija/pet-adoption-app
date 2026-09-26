@@ -74,8 +74,9 @@ cd backend && python manage.py test accounts
 ```
 
 ## Deployment
-Set `DATABASE_URL`, `DJANGO_SECRET_KEY`, `DJANGO_ALLOWED_HOSTS`, `DJANGO_CORS_ALLOWED_ORIGINS`,
-`DJANGO_CSRF_TRUSTED_ORIGINS` and `ADMIN_SECRET_KEY` on the backend, and `VITE_API_BASE_URL` on the frontend.
-Start the backend with `python manage.py collectstatic --noinput && gunicorn config.wsgi`.
+`render.yaml` deploys the API and the React site to [Render](https://render.com) as free services
+(Render dashboard → **New → Blueprint**). The free demo uses SQLite and reloads the sample data each time
+the API starts, so changes made in the demo are temporary. For persistent data, set `DATABASE_URL` to a
+PostgreSQL database.
 
 Pet photos are from [Pixabay](https://pixabay.com/) (free to use under the Pixabay license).
