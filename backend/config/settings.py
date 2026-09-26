@@ -52,6 +52,9 @@ DEBUG = env_bool("DJANGO_DEBUG", False)
 
 ALLOWED_HOSTS = env_list("DJANGO_ALLOWED_HOSTS", ["*"])
 
+# Public demo: admins can browse but not create, edit or delete pets
+DEMO_READ_ONLY = env_bool("DEMO_READ_ONLY", False)
+
 # Application definition
 
 INSTALLED_APPS = [

@@ -18,6 +18,9 @@ services:
         generateValue: true
       - key: DJANGO_DEBUG
         value: "False"
+      # Public demo: the admin dashboard is view-only
+      - key: DEMO_READ_ONLY
+        value: "True"
       - key: ADMIN_SECRET_KEY
         generateValue: true
       # Accept the React site's Render URL (pet-adoption-app or pet-adoption-app-<suffix>)

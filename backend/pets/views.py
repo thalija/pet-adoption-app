@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.utils import timezone
 from django.db.models import Q
 
@@ -23,6 +24,17 @@ class IsAdminDbRole(permissions.BasePermission):
         return bool(db_user and role == "admin")
 
 
+class DemoReadOnly(permissions.BasePermission):
+    """
+    Blocks changes to pets when DEMO_READ_ONLY is on (public demo), so visitors
+    can explore the admin pages without being able to edit or delete data.
+    """
+    message = "Editing is disabled in the demo."
+
+    def has_permission(self, request, view):
+        return not getattr(settings, "DEMO_READ_ONLY", False)
+
+
 class PetsListCreateView(generics.ListCreateAPIView):
     """
     GET  -> Public list. Supports:
@@ -37,7 +49,7 @@ class PetsListCreateView(generics.ListCreateAPIView):
 
     def get_permissions(self):
         if self.request.method == "POST":
-            return [permissions.IsAuthenticated(), IsAdminDbRole()]
+            return [permissions.IsAuthenticated(), IsAdminDbRole(), DemoReadOnly()]
         return [permissions.AllowAny()]
 
     def get_queryset(self):
@@ -92,5 +104,5 @@ class PetsDetailView(generics.RetrieveUpdateDestroyAPIView):
 
     def get_permissions(self):
         if self.request.method in ("PUT", "PATCH", "DELETE"):
-            return [permissions.IsAuthenticated(), IsAdminDbRole()]
+            return [permissions.IsAuthenticated(), IsAdminDbRole(), DemoReadOnly()]
         return [permissions.AllowAny()]

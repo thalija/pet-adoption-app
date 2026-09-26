@@ -4,6 +4,17 @@ A full-stack web app that matches people with adoptable pets. Adopters create a 
 (household with children, activity level), browse and filter pets, and view each pet's profile.
 Shelter admins manage pet profiles through a protected dashboard.
 
+## Live Demo
+**[pet-adoption-app-zeng.onrender.com](https://pet-adoption-app-zeng.onrender.com)**
+
+| Role | Email | Password |
+|---|---|---|
+| Adopter | adopter1@example.com | examplepass33 |
+| Admin | admin1@example.com | examplepass1 |
+
+> Hosted on Render's free tier: the first load after a quiet period can take about a minute while the server wakes up.
+> The live demo is view-only for admins: you can explore the dashboard and pet forms, but saving and deleting are disabled.
+
 ## My Contribution
 This was a 4-person team capstone project. I built the React frontend — the adopter-facing pages
 (search/filter, pet profiles, registration/login UI) and the API client
@@ -51,12 +62,7 @@ npm install
 npm run dev                       # http://localhost:5173
 ```
 
-**Sample accounts** (from the sample data):
-
-| Role | Email | Password |
-|---|---|---|
-| Admin | admin1@example.com | examplepass1 |
-| Adopter | adopter1@example.com | examplepass33 |
+Log in with the demo accounts listed under [Live Demo](#live-demo) (they come from the sample data).
 
 ## API
 | Method | Endpoint | Access |
@@ -77,6 +83,7 @@ cd backend && python manage.py test accounts
 `render.yaml` deploys the API and the React site to [Render](https://render.com) as free services
 (Render dashboard → **New → Blueprint**). The free demo uses SQLite and reloads the sample data each time
 the API starts, so changes made in the demo are temporary. For persistent data, set `DATABASE_URL` to a
-PostgreSQL database.
+PostgreSQL database. `DEMO_READ_ONLY=True` (set in `render.yaml`) blocks creating, editing and deleting pets;
+leave it unset to run with full admin access.
 
 Pet photos are from [Pixabay](https://pixabay.com/) (free to use under the Pixabay license).
