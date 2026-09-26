@@ -18,6 +18,8 @@
    
      // State for error message
      const [error, setError] = useState("");
+     // True while waiting for the server (it can take a minute to wake up on the free host)
+     const [loading, setLoading] = useState(false);
    
      // Handle change operation
      const handleChange = (e) => {
@@ -29,6 +31,7 @@
      const handleSubmit = async (e) => {
        e.preventDefault();
        setError("");
+       setLoading(true);
    
        try {
          const response = await fetch(`${BASE_URL}/api/auth/token/`, {
@@ -85,7 +88,9 @@
          }
        } catch (err) {
          console.error("Login error:", err);
-         setError("Error! Please try again");
+         setError("Could not reach the server. Please try again in a moment.");
+       } finally {
+         setLoading(false);
        }
      };
    
@@ -113,9 +118,12 @@
              required
            />
    
-           <button className="register-button" type="submit">
-             Login
+           <button className="register-button" type="submit" disabled={loading}>
+             {loading ? "Logging in…" : "Login"}
            </button>
+           {loading && (
+             <p>The demo server may take up to a minute to wake up.</p>
+           )}
          </form>
        </div>
      );

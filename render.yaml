@@ -10,7 +10,7 @@ services:
     buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
     # Free instances have no persistent disk, so the demo uses SQLite and
     # re-creates the sample data every time the service starts.
-    startCommand: python manage.py init_local_db --reset && gunicorn config.wsgi --bind 0.0.0.0:$PORT
+    startCommand: python manage.py init_local_db --reset && gunicorn config.wsgi --bind 0.0.0.0:$PORT --access-logfile -
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.15
