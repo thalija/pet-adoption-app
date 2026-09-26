@@ -4,7 +4,11 @@ A full-stack web app that matches people with adoptable pets. Adopters create a 
 (household with children, activity level), browse and filter pets, and view each pet's profile.
 Shelter admins manage pet profiles through a protected dashboard.
 
-Built as a team project.
+## My Contribution
+This was a 4-person team capstone project. I built the React frontend — the adopter-facing pages
+(search/filter, pet profiles, registration/login UI) and the API client
+([`frontend/src/services/petsApi.js`](frontend/src/services/petsApi.js)). The Django backend, REST API,
+JWT auth, and database schema were built by teammates.
 
 ## Features
 - **Adopters:** register/login, search pets by type, breed, disposition (good with children/animals, leashed), date added and availability, view detailed pet profiles and shelter contact info
